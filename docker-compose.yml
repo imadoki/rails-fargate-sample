@@ -23,5 +23,8 @@ services:
       MYSQL_PASSWORD: password
       TZ: 'Asia/Tokyo'
     command: 'mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_ja_0900_as_cs'
+    volumes:
+      - db_data:/var/lib/mysql
 volumes:
   bundle_cache:
+  db_data:
